@@ -1,0 +1,2 @@
+# DocNote
+Markdownで記事を書くサービス。Evernoteのmarkdown版を目指す
