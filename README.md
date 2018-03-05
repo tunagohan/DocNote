@@ -56,6 +56,12 @@ mysql > FLUSH PRIVILEGES;
 $ docker-compose run --rm app rails db:create
 ```
 
+### bundle install
+
+```
+$ docker-compose run --rm app bundle install --path vendor/bundler
+```
+
 ### 接続して確認する
 
 http://localhost:Port番号
@@ -109,6 +115,12 @@ mysql > FLUSH PRIVILEGES;
 
 ```
 $ docker-compose run --rm app rails db:create
+```
+
+### bundle install
+
+```
+$ docker-compose run --rm app bundle install --path vendor/bundler
 ```
 
 ### 接続して確認する
