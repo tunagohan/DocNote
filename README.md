@@ -50,16 +50,16 @@ mysql > GRANT ALL PRIVILEGES ON *.* TO '権限を付与したいユーザー名'
 mysql > FLUSH PRIVILEGES;
 ```
 
-### DBの作成
-
-```
-$ docker-compose run --rm app rails db:create
-```
-
 ### bundle install
 
 ```
 $ docker-compose run --rm app bundle install --path vendor/bundler
+```
+
+### DBの作成
+
+```
+$ docker-compose run --rm app bundle exec rake db:create
 ```
 
 ### 接続して確認する
@@ -111,16 +111,16 @@ mysql > GRANT ALL PRIVILEGES ON *.* TO '権限を付与したいユーザー名'
 mysql > FLUSH PRIVILEGES;
 ```
 
-### DBの作成
-
-```
-$ docker-compose run --rm app rails db:create
-```
-
 ### bundle install
 
 ```
 $ docker-compose run --rm app bundle install --path vendor/bundler
+```
+
+### DBの作成
+
+```
+$ docker-compose run --rm app bundle exec rake db:create
 ```
 
 ### 接続して確認する
