@@ -53,13 +53,13 @@ mysql > FLUSH PRIVILEGES;
 ### bundle install
 
 ```
-$ docker-compose run --rm app bundle install --path vendor/bundler
+$ docker-compose run --rm app bundle install
 ```
 
 ### DBの作成
 
 ```
-$ docker-compose run --rm app bundle exec rake db:create
+$ docker-compose run --rm app bin/rake db:create db:migrate db:seed
 ```
 
 ### 接続して確認する
@@ -114,13 +114,13 @@ mysql > FLUSH PRIVILEGES;
 ### bundle install
 
 ```
-$ docker-compose run --rm app bundle install --path vendor/bundler
+$ docker-compose run --rm app bundle install
 ```
 
 ### DBの作成
 
 ```
-$ docker-compose run --rm app bundle exec rake db:create
+$ docker-compose run --rm app bin/rake db:create db:migrate db:seed
 ```
 
 ### 接続して確認する
