@@ -11,6 +11,6 @@ WORKDIR /app
 
 ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
-RUN bundle install --path vendor/bundler
+RUN bundle install
 ADD . /app
 RUN mkdir -p tmp/sockets
