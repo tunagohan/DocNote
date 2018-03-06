@@ -33,7 +33,6 @@ module ArticlesHelper
       :space_after_headers => true,
       :no_intra_emphasis => true,
       :tables => true,
-      :space_after_headers => true,
       :fenced_code_blocks => true,
       :hard_wrap => true,
       :strikethrough => true,
