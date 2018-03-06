@@ -26,7 +26,7 @@ module ArticlesHelper
   end
 
   def markdown(text)
-    html_render = Redcarpet::Render::HTML.new(filter_html: true, hard_wrap: true)
+    html_render = HTMLwithCoderay.new(filter_html: true, hard_wrap: true)
 
     options = {
       :autolink => true,
@@ -40,7 +40,7 @@ module ArticlesHelper
       :filter_html => true
     }
     unless @markdown
-      @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(filter_html: true, hard_wrap: true), options)
+      @markdown = Redcarpet::Markdown.new(html_render, options)
     end
 
     @markdown.render(text).html_safe
