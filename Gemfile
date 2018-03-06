@@ -5,54 +5,42 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
-# Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
-# Use Puma as the app server
 gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
-
-# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
 # Self ADD Gems ---------------------- #
-gem 'devise'
-gem 'omniauth-twitter'
-gem 'kaminari'
-gem 'activeadmin'
-# Plus integrations with:
-gem 'cancan'
-gem 'draper'
-gem 'pundit'
-
+gem 'devise', '4.4.1'
+gem 'omniauth-twitter', '1.4.0'
+gem 'kaminari', '>= 0.15', '< 2.0'
+gem 'activeadmin', '1.2.1'
+gem 'cancan', '1.6.10'
+gem 'draper', '3.0.1'
+gem 'pundit', '1.1.0'
 # ------------------------------------- #
 
 group :development, :test do
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-end
-
-group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
 # Self ADD Gems ----------------------- #
-  gem "letter_opener"
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-byebug'
-  gem 'pry-stack_explorer'
+  gem 'letter_opener', '1.6.0'
+  gem 'pry-rails', '0.3.6'
+  gem 'pry-doc', '0.13.3'
+  gem 'pry-byebug', '3.6.0'
+  gem 'pry-stack_explorer', '0.4.9.2'
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_girl_rails', '4.9.0'
+  gem 'faker', '1.8.7'
 # ------------------------------------- #
 end
 
