@@ -23,6 +23,8 @@ gem 'activeadmin', '1.2.1'
 gem 'cancan', '1.6.10'
 gem 'draper', '3.0.1'
 gem 'pundit', '1.1.0'
+gem 'redcarpet', '3.4.0'
+gem 'coderay', '1.1.2'
 # ------------------------------------- #
 
 group :development, :test do
@@ -46,4 +48,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
