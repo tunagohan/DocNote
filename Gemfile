@@ -25,6 +25,7 @@ gem 'draper', '3.0.1'
 gem 'pundit', '1.1.0'
 gem 'redcarpet', '3.4.0'
 gem 'coderay', '1.1.2'
+gem 'bootstrap_form'
 # ------------------------------------- #
 
 group :development, :test do
