@@ -1,4 +1,7 @@
 class Article < ApplicationRecord
+  belongs_to :user, optional: true
+  validates :user_id, presence: true
+
   def self.find(input)
     if input.is_a?(Integer)
       super
