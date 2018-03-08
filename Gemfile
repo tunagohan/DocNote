@@ -41,7 +41,7 @@ group :development, :test do
   gem 'pry-byebug', '3.6.0'
   gem 'pry-stack_explorer', '0.4.9.2'
   gem 'rspec-rails', '~> 3.7'
-  gem 'factory_girl_rails', '4.9.0'
+  gem 'factory_bot_rails', '4.8.2'
   gem 'faker', '1.8.7'
 # ------------------------------------- #
 end
