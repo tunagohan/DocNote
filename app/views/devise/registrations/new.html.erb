@@ -5,7 +5,7 @@
 
       <%= bootstrap_form_for(resource,
                              :as => resource_name,
-                             :url => registration_path(resource_name)) do |f| %>
+                             :url => new_user_registration_path) do |f| %>
 
         <%= f.text_field :username,
                      placeholder: 'username',
