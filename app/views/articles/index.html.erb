@@ -8,15 +8,43 @@
 <% end %>
 <h1>Articles</h1>
 
-<% @articles.each do |article| %>
+<table>
+  <thead>
+    <tr>
+      <th>ユーザーID</th>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th>作成日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.user_id %></td>
+        <td><%= link_to article.title, article %></td>
+        <td><%= article.body %></td>
+        <td><%= article.created_at %></td>
+        <td>
+        <% if article.user_id === current_user.id %>
+          <%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<!-- <% @articles.each do |article| %>
   <div id="article">
     「<%= link_to article.title, article %>」<br>
     <%= article.body %><br>
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
-<% end %>
-<table>
+<% end %> -->
 
 <br>
 
