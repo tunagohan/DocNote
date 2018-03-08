@@ -35,7 +35,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 # Self ADD Gems ----------------------- #
-  gem 'letter_opener', '1.6.0'
+  gem 'letter_opener_web', '1.3.3'
   gem 'pry-rails', '0.3.6'
   gem 'pry-doc', '0.13.3'
   gem 'pry-byebug', '3.6.0'
