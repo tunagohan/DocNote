@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   # RootPath
   root to: 'articles#index'
 
-  devise_for :users, :controllers => {
-    :registrations => 'users/registrations',
-    :sessions => 'users/sessions'
+  devise_for :users, controllers: {
+    confirmations: 'users/confirmations',
+    passwords:     'users/passwords',
+    registrations: 'users/registrations',
+    sessions:      'users/sessions',
   }
 
   devise_scope :user do
