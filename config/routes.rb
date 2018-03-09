@@ -4,14 +4,17 @@ Rails.application.routes.draw do
   # RootPath
   root to: 'articles#index'
 
-  devise_for :users, :controllers => {:registrations => "registrations"}
+  devise_for :users, controllers: {
+    confirmations: 'users/confirmations',
+    passwords:     'users/passwords',
+    registrations: 'users/registrations',
+    sessions:      'users/sessions',
+  }
 
   devise_scope :user do
-    get    'login'         => 'devise/sessions#new'
-    delete 'logout'        => 'devise/sessions#destroy'
-    get    'signup'        => 'devise_invitable/registrations#new'
-    get    'useredit'      => 'devise_invitable/registrations#edit'
-    get    'password'      => 'devise/passwords#new'
+    get "signin", :to => "users/sessions#new"
+    get "signout", :to => "users/sessions#destroy"
+    get "signup", :to => "users/registrations#new"
   end
 
   resources :users
