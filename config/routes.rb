@@ -8,10 +8,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get    'login'         => 'devise/sessions#new'
-    delete 'logout'        => 'devise/sessions#destroy'
     get    'signup'        => 'devise_invitable/registrations#new'
-    get    'useredit'      => 'devise_invitable/registrations#edit'
-    get    'password'      => 'devise/passwords#new'
   end
 
   resources :users
