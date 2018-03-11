@@ -29,7 +29,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap_form', '2.7.0'
 gem 'jquery-rails', '4.3.1'
 gem 'rails-i18n', '~> 5.1'
-gem 'acts-as-taggable-on', '~> 4.0'
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'master'
 # ------------------------------------- #
 
 group :development, :test do
