@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>tag:</strong>
+  <%= @article.tag_list %>
+</p>
+
+<p>
   <strong>Body:</strong>
   <%= markdown(@article.body).html_safe %>
 </p>
