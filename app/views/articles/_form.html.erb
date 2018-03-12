@@ -13,12 +13,25 @@
 
   <div class="field">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :article_title %>
+    <%= form.text_field :title,
+                        placeholder: 'Title',
+                        id: :article_title,
+                        class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :tag_list,
+                        placeholder: 'tags',
+                        value: @article.tag_list.join(','),
+                        class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :article_body %>
+    <%= form.text_area :body,
+                       placeholder: 'Body',
+                       id: :article_body,
+                       class: "form-control" %>
   </div>
 
   <div class="actions">
