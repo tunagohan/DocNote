@@ -10,6 +10,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @post = Post.find(params[:id])
+    @post.save!
   end
 
   # GET /articles/new
