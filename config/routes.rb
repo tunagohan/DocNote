@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
   resources :articles, path: :note
 
   # RootPath
-  root to: 'top#index'
+
+  root to: 'top#index', as: :top_root
+
 
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
@@ -22,5 +25,7 @@ Rails.application.routes.draw do
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
+
   match "*path" => "application#handle_404", via: :all
+
 end
