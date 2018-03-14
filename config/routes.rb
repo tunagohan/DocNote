@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :articles, path: :note
 
   # RootPath
-  root to: 'articles#index'
+  root to: 'top#index'
 
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
