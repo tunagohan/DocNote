@@ -2,6 +2,8 @@ class Article < ApplicationRecord
   belongs_to :user, optional: true
   validates :user_id, presence: true
 
+  validates :title, :body, presence: true
+
   acts_as_taggable
 
   def self.find(input)

@@ -30,6 +30,9 @@ gem 'bootstrap_form', '2.7.0'
 gem 'jquery-rails', '4.3.1'
 gem 'rails-i18n', '~> 5.1'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'master'
+
+gem 'marked-rails', '0.3.2.0'
+gem 'vuejs-rails', '2.5.13'
 # ------------------------------------- #
 
 group :development, :test do
