@@ -1,10 +1,10 @@
 class ChangeColumnNull < ActiveRecord::Migration[5.1]
   def change
     # Articles DB
-    change_column_null :articles, :title, false, 'No Title'
-    change_column_null :articles, :body, false, 'No Body'
+    change_column_null :articles, :title, false
+    change_column_null :articles, :body, false
 
     # Users DB
-    change_column_null :users, :username, false, 'No Name'
+    change_column_null :users, :username, false
   end
 end
