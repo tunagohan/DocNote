@@ -26,15 +26,7 @@
         </td>
         <td><%= article.body %></td>
         <td><%= simple_time(article.created_at)%></td>
-        <td>
-        <% if article.user_id === current_user.id %>
-          <%= link_to 'Edit', edit_article_path(article) %>
-          <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
-        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>

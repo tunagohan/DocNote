@@ -1,29 +1,25 @@
-<p id="notice"><%= notice %></p>
+<main role="main" class="container">
+  <div class="my-3 p-3 bg-white rounded box-shadow">
+    <div class="well well-lg">
+      <h1 class="border-bottom border-gray pb-2 mb-0">
+        <span style="border-bottom: solid 1px gray;"><%= @article.title %></span>
+      </h1>
+      <h4 class="border-bottom border-gray pb-2 mb-0">
+        <% @article.tag_list.each do |tag| %>
+        <span class="label label-primary"><%= tag %></span>
+        <% end %>
+      </h4>
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <%= markdown(@article.body).html_safe %>
+        </p>
+      </div>
 
-<p>
- <strong>ユーザーID</strong><br>
- <%= @article.user_id %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>tag:</strong>
-  <%= @article.tag_list %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= markdown(@article.body).html_safe %>
-</p>
-
-<p>
- <strong>origin</strong><br>
- <%= @article.body %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+    </div>
+    <small class="d-block text-right mt-3">
+      <%= link_to '編集', edit_article_path(@article) %> |
+      <%= link_to '戻る', articles_path %> |
+      <%= link_to '削除', @article, method: :delete, data: { confirm: '本当に消えちゃうよ？' } %>
+    </small>
+  </div>
+</main>
