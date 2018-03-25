@@ -9,12 +9,24 @@
   </head>
 
   <body>
+
     <%= render 'layouts/navigation' %>
+
     <div class="container">
+
       <% flash.each do |name, msg| %>
-          <%= content_tag(:div, msg, class: "alert alert-info") %>
+          <%= content_tag(:div, msg, class: "alert alert-info", id: "notice") %>
       <% end %>
+
       <%= yield %>
+
     </div>
+
+    <script>
+      $( document ).ready(function() {
+        $('#notice').fadeOut(5000);
+    });
+    </script>
+
   </body>
 </html>
