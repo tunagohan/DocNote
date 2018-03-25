@@ -18,7 +18,7 @@
           <p class="meta"><%= simple_time(article.created_at) %></p>
         </header>
         <div class="excerpt">
-          <%= html_strip_tags(article.body).truncate(30) %>
+          <%= html_strip_tags(markdown(article.body)).truncate(30) %>
           <%= link_to 'Read more', article %>
         </div>
       </span>

@@ -1,53 +1,56 @@
 module ArticlesHelper
   require "redcarpet"
   require "coderay"
+  require 'active_support/core_ext/object/try'
 
   class HTMLwithCoderay < Redcarpet::Render::HTML
     def block_code(code, language)
-      language = language.split(':')[0]
+
+      use_language = language.try(:include?, ":")
+      if use_language
+        language = language.split(':')[0]
+      end
 
       case language.to_s
-      when 'rb'
-        lang = 'ruby'
-      when 'yml'
-        lang = 'yaml'
-      when 'css'
-        lang = 'css'
-      when 'html'
-        lang = 'html'
-      when ''
-        lang = 'md'
-      else
-        lang = language
+        when 'rb'
+          lang = 'ruby'
+        when 'yml'
+          lang = 'yaml'
+        when 'css'
+          lang = 'css'
+        when 'html'
+          lang = 'html'
+        when ''
+          lang = 'md'
+        when nil
+          lang = 'md'
+        else
+          lang = language
       end
 
       CodeRay.scan(code, lang).div
     end
   end
 
-  def markdown(text)
-    html_render = HTMLwithCoderay.new(filter_html: true, hard_wrap: true)
+   def markdown(text)
+    html_render = HTMLwithCoderay.new( with_toc_data: true)
 
-    options = {
-      :autolink => true,
-      :space_after_headers => true,
-      :no_intra_emphasis => true,
-      :tables => true,
-      :fenced_code_blocks => true,
-      :hard_wrap => true,
-      :strikethrough => true,
-      :filter_html => true
+    option = {
+        autolink: true,
+        space_after_headers: true,
+        fenced_code_blocks: true,
+        tables: true,
+        hard_wrap: true,
+        lax_html_blocks: true,
+        strikethrough: true
     }
-    unless @markdown
-      @markdown = Redcarpet::Markdown.new(html_render, options)
-    end
 
-    @markdown.render(text).html_safe
+    markdown = Redcarpet::Markdown.new(html_render, option)
+    markdown.render(text)
   end
 
   def html_strip_tags(text)
-    strip_tags = markdown(text)
-    ApplicationController.helpers.strip_tags(strip_tags)
+    ApplicationController.helpers.strip_tags(text)
   end
 
 end
