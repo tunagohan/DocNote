@@ -44,4 +44,10 @@ module ArticlesHelper
 
     @markdown.render(text).html_safe
   end
+
+  def html_strip_tags(text)
+    strip_tags = markdown(text)
+    ApplicationController.helpers.strip_tags(strip_tags)
+  end
+
 end
