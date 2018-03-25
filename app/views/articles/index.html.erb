@@ -2,17 +2,26 @@
 
 <%= link_to '新しく記事を書く', new_article_path %>
 
+
 <div class="post-teaser">
+
   <% @articles.each do |article| %>
-    <span>
-      <header>
-        <h1><%= link_to article.title, article, class: "post-link" %></h1>
-        <p class="meta"><%= simple_time(article.created_at) %></p>
-      </header>
-      <div class="excerpt">
-        <%= html_strip_tags(article.body).truncate(30) %>
-        <%= link_to 'Read more', article %>
-      </div>
-    </span>
+    <div class="tr-Item">
+      <span>
+        <header>
+          <h1><%= link_to article.title, article, class: "post-link" %></h1>
+          <p class="meta">
+            <% article.tag_list.each do |tag| %>
+              <span class="label label-primary"><%= tag %></span>
+            <% end %>
+          </p>
+          <p class="meta"><%= simple_time(article.created_at) %></p>
+        </header>
+        <div class="excerpt">
+          <%= html_strip_tags(article.body).truncate(30) %>
+          <%= link_to 'Read more', article %>
+        </div>
+      </span>
+    </div>
   <% end %>
 </div>
