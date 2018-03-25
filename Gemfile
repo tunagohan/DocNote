@@ -33,6 +33,8 @@ gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', branch: 'maste
 
 gem 'marked-rails', '0.3.2.0'
 gem 'vuejs-rails', '2.5.13'
+
+gem 'font-awesome-rails', '4.7.0.3'
 # ------------------------------------- #
 
 group :development, :test do
