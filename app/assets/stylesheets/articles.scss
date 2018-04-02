@@ -1,3 +1,7 @@
+.article_content {
+    width: 100%;
+}
+
 .form-control.edit-content {
     resize: none;
     // height: 400px;
@@ -28,9 +32,4 @@ textarea.form-control , .half-preview {
 }
 .post-link {
     color: #000;
-}
-
-.test {
-    width: 100%;
-    bottom: 0;
 }
