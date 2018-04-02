@@ -13,7 +13,7 @@
     <div class="wrapper">
     <%= render 'layouts/navigation' %>
 
-    <div class="container article_content">
+    <div class="container <%= controller.controller_name %>-<%= controller.action_name %>">
 
       <% flash.each do |name, msg| %>
           <%= content_tag(:div, msg, class: "alert alert-info", id: "notice") %>
