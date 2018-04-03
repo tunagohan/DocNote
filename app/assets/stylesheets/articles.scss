@@ -4,17 +4,17 @@
 
 .form-control.edit-content {
     resize: none;
-    // height: 400px;
 }
 
 .form-control.preview-content {
     resize: none;
     line-height: 1.5em;
-    // height: 400px;
 }
-textarea.form-control , .half-preview {
-    height: 750px;
+
+.half-preview{
+   height: 750px; 
 }
+
 .posts .post-teaser {
     width: 100%;
     margin-bottom: 0;
