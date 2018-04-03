@@ -1,30 +1,36 @@
 <div class="row">
-  <h1>New Article</h1>
-
+  <div class="col-md-12">
+    <h1>New Article</h1>
+  </div>
+</div>
+<div class="row">
   <%= bootstrap_form_for @article do |form| %>
-
     <div class="col-md-12">
       <%= form.text_field :title,
                           placeholder: 'Title',
                           id: :article_title,
                           class: "form-control" %>
     </div>
-
+</div>
+<div class="row">
     <div class="col-md-12">
       <%= form.text_field :tag_list,
                           placeholder: 'tags[日記,個人メモ]',
                           value: @article.tag_list.join(','),
                           class: "form-control" %>
     </div>
-
-    <div class="col-md-6">
+</div>
+<div class="row contant-area">
+    <div class="col-lg-6 col-sm-12 half-preview">
       <%= form.text_area :body,
                           placeholder: 'Body',
-                          class: "form-control edit-content" %>
+                          class: "form-control edit-content half-content" %>
     </div>
 
-    <div class="col-md-6">
-      <div class="form-control preview-content"></div>
+    <div class="col-lg-6 visible-lg half-preview">
+      <div class="form-group">
+        <div class="form-control preview-content half-content"></div>
+      </div>
     </div>
 
     <script type="text/javascript">
@@ -42,14 +48,14 @@
     </script>
 
     <%= form.hidden_field :user_id, value: current_user.id %>
-
-    <div class="col-md-12">
+</div>
+<div class="row footer-area">
+    <div class="col-md-12 button-area">
       <%= form.submit "投稿する", class: "btn btn-success pull-right" %>
 
       <%= link_to articles_path, class: "btn btn-mini btn-danger pull-left" do %>
         <i class="icon-trash icon-white"></i> 戻る
       <% end %>
     </div>
-
-  <% end %>
 </div>
+  <% end %>

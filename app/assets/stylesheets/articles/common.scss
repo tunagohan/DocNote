@@ -1,18 +1,22 @@
+// articles共通パーツ
 .article_content {
     width: 100%;
+}
+
+.contant-area {
+	margin: 0 auto;
+}
+
+.col-lg-6.half-preview {
+	padding: 0;
 }
 
 .form-control.edit-content {
     resize: none;
 }
 
-.form-control.preview-content {
-    resize: none;
-    line-height: 1.5em;
-}
-
-.half-preview{
-   height: 750px; 
+.form-control.half-content {
+	height: 100vh;
 }
 
 .posts .post-teaser {
@@ -32,4 +36,21 @@
 }
 .post-link {
     color: #000;
+}
+
+.footer-area {
+	width: 100%;
+	// border: solid 1px #e8e8e8;
+	background-color: #eeeeee;
+	position: fixed;
+	bottom: 0;
+}
+
+.button-area {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.btn-submit , .btn-back {
+
 }
