@@ -1,1 +1,37 @@
 // articles共通パーツ
+.article_content {
+    width: 100%;
+}
+
+.form-control.edit-content {
+    resize: none;
+    // height: 400px;
+}
+
+.form-control.prev-content {
+	height: 750px;
+}
+
+.form-group.half-preview {
+	height: 100%;
+}
+
+
+.posts .post-teaser {
+    width: 100%;
+    margin-bottom: 0;
+    display: inline-block;
+    background-size: cover;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #fff;
+}
+.tr-Item {
+    display: flex;
+    width: 100%;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 16px;
+}
+.post-link {
+    color: #000;
+}
