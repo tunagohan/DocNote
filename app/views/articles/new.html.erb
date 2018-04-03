@@ -21,14 +21,16 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 half-preview">
       <%= form.text_area :body,
                           placeholder: 'Body',
-                          class: "form-control edit-content half-preview" %>
+                          class: "form-control edit-content half-content" %>
     </div>
 
-    <div class="col-md-6">
-      <div class="form-control preview-content half-preview"></div>
+    <div class="col-md-6 half-preview">
+      <div class="form-group">
+        <div class="form-control preview-content half-content"></div>
+      </div>
     </div>
 
     <script type="text/javascript">
