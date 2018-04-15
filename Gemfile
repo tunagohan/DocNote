@@ -50,6 +50,8 @@ gem 'carrierwave', '~> 1.0'
 gem 'fog-aws'
 # resized image
 gem 'rmagick'
+# ENV
+gem 'dotenv-rails'
 # ------------------------------------- #
 
 group :development, :test do
