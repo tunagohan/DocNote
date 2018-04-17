@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
     aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
     aws_secret_access_key: ENV['AWS_SECRET_KEY'],
     region: ENV['AWS_REGION'],
-    host: ENV['AWS_HOST']
+    host: ENV['AWS_S3_HOST']
   }
 
   # キャッシュもS3に置くようにする
@@ -14,7 +14,7 @@ CarrierWave.configure do |config|
   config.cache_dir = 'tmp/image-cache'
 
   # S3バケット名
-  config.fog_directory = ENV['AWS_DIRECTORY']
+  config.fog_directory = ENV['AWS_S3_BUCKET_NAME']
 
   # CloudFrontのDomainName or CNAME(例: http://xxx.cloudfront.net)
   # CDNを使わない場合は、S3バケットの絶対パス(例: https://s3-us-west-2.amazonaws.com/<backet>)
