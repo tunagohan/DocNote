@@ -9,7 +9,6 @@
     <div class="tr-Item">
       <span>
         <header>
-          <%= image_tag article.image.thumb.url %>
           <h1><%= link_to article.title, article, class: "post-link" %></h1>
           <p class="meta">
             <% article.tag_list.each do |tag| %>
