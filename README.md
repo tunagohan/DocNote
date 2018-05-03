@@ -53,7 +53,7 @@ $ docker-compose run --rm app bundle install
 ### DBの作成
 
 ```
-$ docker-compose run --rm app rake db:create db:migrate:reset db:seed
+$ docker-compose run --rm app rake db:create db:migrate db:seed
 ```
 
 ### 接続して確認する
