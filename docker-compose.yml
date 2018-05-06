@@ -12,6 +12,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     command: bundle exec puma -C config/puma.rb
+#    command: bundle exec rdebug-ide --port 1234 --dispatcher-port 26162 --host 0.0.0.0 -- bin/rails s -b 0.0.0.0 -p 3000
     volumes:
       - .:/app
       - ./public:/app/public
@@ -19,6 +20,11 @@ services:
       - ./log:/app/log
     depends_on:
       - db
+    stdin_open: true
+    tty: true
+#    ports:
+#      - "1234:1234"
+#      - "26162:26162"
 # MySQL Setting
   db:
     container_name: md_mysql
