@@ -30,31 +30,11 @@
                          placeholder: 'Body',
                          class: "form-control edit-content half-content" %>
     </div>
-
-    <div class="col-lg-6 visible-lg half-preview">
-      <div class="form-group">
-        <div class="form-control preview-content half-content"></div>
-      </div>
     </div>
-
-    <script type="text/javascript">
-      $(function () {
-        $(".edit-content").each(function () {
-          $(this).bind('keyup', replaceMarkdown(this));
-        });
-
-        function replaceMarkdown(elm) {
-          return function () {
-            str = $(this).val();
-            $(".preview-content").html(marked(str));
-          }
-        }
-      });
-    </script>
-
-    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
+  <%= form.hidden_field :user_id, value: current_user.id %>
+  
   <div class="row footer-area">
     <div class="col-md-12 button-area">
       <%= form.submit "投稿する", class: "btn btn-success pull-right" %>
@@ -63,5 +43,5 @@
       <% end %>
     </div>
   </div>
-  
+
 <% end %>
