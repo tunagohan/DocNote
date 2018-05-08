@@ -10,11 +10,11 @@ class Article < ApplicationRecord
     if input.is_a?(Integer)
       super
     else
-      find_by_title(input)
+      find_by_id(input)
     end
   end
 
   def to_param
-    title
+    id
   end
 end

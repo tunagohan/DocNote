@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @articles = Article.find(params[:id])
+    @article = Article.find_by(id: params[:id])
   end
 
   # GET /articles/new
@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @articles = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   # POST /articles
