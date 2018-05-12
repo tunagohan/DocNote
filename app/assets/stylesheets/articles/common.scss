@@ -51,6 +51,18 @@
 	margin-bottom: 5px;
 }
 
-.btn-submit , .btn-back {
+ul, ol {
+  padding-left: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
+table, td, th{
+  font-weight: 700;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 8px 10px;
 }

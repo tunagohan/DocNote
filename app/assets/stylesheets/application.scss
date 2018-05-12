@@ -2,7 +2,11 @@
 
 // Bootstrap
 @import "bootstrap-sprockets";
+@import "rails_bootstrap_forms";
 @import "bootstrap";
+
+@import "font-awesome";
+@import "bootstrap-tagsinput";
 
 // Variables
 @import "base/variables";
@@ -22,7 +26,3 @@
 
 // Top
 @import "top";
-
-//= require bootstrap
-//= require rails_bootstrap_forms
-@import "font-awesome";
