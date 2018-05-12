@@ -14,7 +14,8 @@
       <%= form.text_field :tag_list,
                           placeholder: 'tags[日記,個人メモ]',
                           value: @article.tag_list.join(','),
-                          class: "form-control" %>
+                          class: "form-control",
+                          :'data-role' => "tagsinput" %>
     </div>
   </div>
 
