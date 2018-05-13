@@ -1,28 +1,26 @@
-//app/assets/stylesheets/application.scss
+// app/assets/stylesheets/application.scss
 
+// *--* Gem *------------------------------------------* //
 // Bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-// Variables
-@import "base/variables";
-
-// Default styles
-@import "base/default";
-
-// Partials - メインのcssファイル
-@import "partials/*";
-@import "partials/layout/*";
-
-// メディアクエリ（レスポンシブデザイン用）
-@import "responsive/*";
-
-// Article
-@import "articles/*";
-
-// Top
-@import "top";
-
-//= require bootstrap
-//= require rails_bootstrap_forms
+// Awesome
 @import "font-awesome";
+// *--* Gem *------------------------------------------* //
+
+// *--* Path *-----------------------------------------* //
+// [共通パーツ]
+@import "base/variables";
+@import "base/default";
+// [ナビバーパーツ]
+@import "partials/layout/navigation";
+@import "partials/signin";
+@import "partials/signup";
+// [レスポンシブパーツ]
+@import "responsive/desktop";
+@import "responsive/mobile";
+// Article
+@import "articles/common";
+// Top
+@import "top/top";
+// *--* Path *-----------------------------------------* //

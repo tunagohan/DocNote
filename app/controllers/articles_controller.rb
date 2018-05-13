@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
-    @articles = Article.find(params[:id])
+    @articles = Article.find_by(id: params[:id])
     @articles.save!
   end
 
@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to(article_path(id: @article.id), notice: 'Article was successfully created.') }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to(article_path(id: @article.id), notice: 'Article was successfully updated.') }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit }

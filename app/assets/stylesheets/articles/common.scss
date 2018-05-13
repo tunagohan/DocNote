@@ -11,14 +11,6 @@
 	padding: 0;
 }
 
-.form-control.edit-content {
-    resize: none;
-}
-
-.form-control.half-content {
-	height: 100vh;
-}
-
 .posts .post-teaser {
     width: 100%;
     margin-bottom: 0;
@@ -51,6 +43,23 @@
 	margin-bottom: 5px;
 }
 
-.btn-submit , .btn-back {
+.form-control.edit-content.half-content {
+  resize: none;
+  height: 75vh;
+}
 
+ul, ol {
+  padding-left: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+table, td, th{
+  font-weight: 700;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 8px 10px;
 }
