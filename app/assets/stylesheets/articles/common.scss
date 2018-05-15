@@ -1,53 +1,13 @@
-// articles共通パーツ
-.article_content {
-    width: 100%;
-}
+// articlesに関するstyle
+// index
+// show
+// new
+// edit
 
-.contant-area {
-	margin: 0 auto;
-}
+// -- index -- //
 
-.col-lg-6.half-preview {
-	padding: 0;
-}
 
-.posts .post-teaser {
-    width: 100%;
-    margin-bottom: 0;
-    display: inline-block;
-    background-size: cover;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    color: #fff;
-}
-.tr-Item {
-    display: flex;
-    width: 100%;
-    font-size: 1.4rem;
-    border-bottom: 1px solid #e8e8e8;
-    padding: 16px;
-}
-.post-link {
-    color: #000;
-}
-
-.footer-area {
-	width: 100%;
-	// border: solid 1px #e8e8e8;
-	background-color: #eeeeee;
-	position: fixed;
-	bottom: 0;
-}
-
-.button-area {
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-.form-control.edit-content.half-content {
-  resize: none;
-  height: 75vh;
-}
-
+// -- show -- //
 ul, ol {
   padding-left: 1.5em;
   margin-top: 0;
@@ -62,4 +22,34 @@ table, td, th{
   border-right: 1px solid #ccc;
   border-left: 1px solid #ccc;
   padding: 8px 10px;
+}
+
+// -- new edit -- //
+
+.wrapper.articles-new {
+  position: absolute;
+  top: 51px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f8faf7;
+}
+
+.footer-area {
+	width: 100%;
+	border: solid 1px #aaaaaa;
+	background-color: #bbbbbb;
+	position: fixed;
+	bottom: 0;
+}
+
+.edit-content {
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 86px;
+  bottom: 40px;
+  resize: none;
+  height: 700px;
+
 }
