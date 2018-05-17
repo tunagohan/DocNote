@@ -1,0 +1,27 @@
+<%= form_with(model: article, local: true) do |f| %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+<div class="editor_content">
+
+  <div class="edit_title">
+    <%= f.text_field :title, placeholder: 'タイトル', class: "form-control", tabindex: "1" %>
+  </div>
+
+  <div class="edit_tag">
+    <%= f.text_field :tag_list, placeholder: 'タグを記入してください(例：Rails, Test)', value: @article.tag_list.join(','), class: "form-control", tabindex: "2" %>
+  </div>
+
+  <div class="edit_body">
+    <%= f.text_area :body, placeholder: '日記, 個人メモ', class: "markdown_area form-control", tabindex: "3" %>
+  </div>
+
+
+  <div class="footer-area">
+    <div class="button-area">
+      <%= f.submit "投稿する", class: "btn btn-success pull-right" %>
+      <%= link_to articles_path, class: "btn btn-mini btn-danger pull-left" do %>
+        <i class="icon-trash icon-white"></i> 戻る
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

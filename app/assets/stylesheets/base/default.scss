@@ -10,21 +10,6 @@ body {
   background: $backgroundColor;
   font-size: 14px;
   font-size: 1.4rem;
-  padding-top: 70px;
-}
-
-i {
-  width: 26px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a:hover, a:active, a:link, a:visited {
-  text-decoration: none;
-}
-
-.control-label {
-  display: none;
+  padding-top: 50px;
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
 }
